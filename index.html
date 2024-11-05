@@ -1,26 +1,27 @@
 <link rel="stylesheet" type="text/css" href="./resources/style.css" media="screen" />
 <link rel="stylesheet" href="resources/dics.original.css">
 
+<html lang="en">
+
 <head>
     <title>
         PCS4ESR: Point Cloud Serialization for Efficient Surface Reconstruction. 
     </title>
     <meta property="og:title"
         content="PCS4ESR: Point Cloud Serialization for Efficient Surface Reconstruction." />
-    <meta property="og:image" content="./resources/kitti360_quali_dense/output_stacked_all_compressed.mp4"/>
     <meta property="og:image" content="./resources/paper.png"/>
   	<meta property="og:description" content="
-    A multi-scale, point-based neural radiance field that allows for leveraging point cloud regardless of it's low quality (e.g., LIDAR with large incomplete space)." />
+      A multi-scale, point-based surface reconstruction method that leverages point cloud serialization for fast neighbor approximation." />
     <meta property="twitter:card"          content="summary" />
-    <meta property="twitter:title"         content="PointNeRF++: A multi-scale, point-based Neural Radiance Field" />
-    <meta property="twitter:description"   content="A multi-scale, point-based neural radiance field that allows for leveraging point cloud regardless of it's low quality (e.g., LIDAR with large incomplete space)." />
-    <meta property="twitter:image"         content="./resources/kitti360_quali_dense/output_stacked_all_compressed.mp4" />
+    <meta property="twitter:title"         content="PCS4ESR: Point Cloud Serialization for Efficient Surface Reconstruction" />
+    <meta property="twitter:description"   content="A multi-scale, point-based surface reconstruction method that leverages point cloud serialization for fast neighbor approximation." />
+    <meta property="twitter:image"         content="./resources/paper.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             text-align: center;
-            background-color: #f0f0f0; /* Optional: Set a background color for better visibility */
+            background-color: #ffffff; /* Optional: Set a background color for better visibility */
         }
         .larger-arrow {
             font-size: 2.0em; /* Adjust the font size as needed */
@@ -33,75 +34,71 @@
 </head>
 
 <body>
-
     <div class="container">
         <div class="title">
             PCS4ESR: Point Cloud Serialization for Efficient Surface Reconstruction. 
         </div>
 
-        <div class="venue">
-            Submitted to 3D Vision (3DV), 2024 
+        <br><br>
+        <div class="author">
+            <a href="http://wsunid.github.io" target="_blank">Zhen Li</a> <sup>1</sup> 
+        </div>
+        <div class="author">
+            <a href="https://wsunid.github.io/" target="_blank">Weiwei Sun</a> <sup>2</sup>
+        </div>
+        <div class="author">
+            <a href="https://shrisudhan.github.io/" target="_blank">Shrisudhan Govindarajan</a> <sup>1</sup>  
+        </div>
+        <div class="author">
+            <a href="https://scholar.google.com/citations?user=eOPO9E0AAAAJ&hl=en" target="_blank">Shaobo Xia</a> <sup>3</sup> 
+        </div>
+        <div class="author">
+            <a href="http://drebain.com/" target="_blank">Daniel Rebain</a> <sup>2</sup> 
+        </div>
+        <div class="author">
+            <a href="https://www.cs.ubc.ca/~kmyi" target="_blank">Kwang Moo Yi</a> <sup>2</sup> 
+        </div>
+    
+        <div class="author">
+            <a href="https://taiya.github.io" target="_blank">Andrea Tagliasacchi</a> <sup>1 4 5</sup>
         </div>
 
         <br><br>
-
-        <div class="author">
-            <a href="http://wsunid.github.io" target="_blank">Weiwei Sun</a> <sup>1</sup> 
+        <div class="affiliation_group">
+            <div class="affiliation_1"><sup>1</sup> Simon Fraser University</div>
+            <div class="affiliation_1"><sup>2</sup> University of British Columbia</div>
         </div>
-        <div class="author">
-            <a href="https://etrulls.github.io" target="_blank">Eduard Trulls</a> <sup>2</sup>
+        <div class="affiliation_group">
+            <div class="affiliation_2"><sup>3</sup> Changsha University of Science and Technology</div>
+            <div class="affiliation_2"><sup>4</sup> University of Toronto</div>
+            <div class="affiliation_2"><sup>5</sup> Google DeepMind</div>
         </div>
-        <div class="author">
-            <a href="https://pointnerfpp.github.io/" target="_blank">Yang-Che Tseng</a> <sup>1</sup>  
-        </div>
-        <div class="author">
-            <a href="https://pointnerfpp.github.io/" target="_blank">Sneha Sambandam</a> <sup>1</sup> 
-        </div>
-
-        <div class="author">
-            <a href="https://hippogriff.github.io/" target="_blank">Gopal Sharma</a> <sup>1</sup> 
-        </div>
-
-        <div class="author">
-            <a href="https://taiya.github.io" target="_blank">Andrea Tagliasacchi</a> <sup>3 4 5</sup>
-        </div>
-        <div class="author">
-            <a href="https://www.cs.ubc.ca/~kmyi" target="_blank">Kwang Moo Yi</a> <sup>1</sup> 
-        </div>
-
-        <br><br> 
-        <div class="affiliation"><sup>1</sup> University of British Columbia </div>
-        <div class="affiliation"><sup>2</sup> Google Research</div>
-        <div class="affiliation"><sup>3</sup> Google DeepMind </div>
-        <div class="affiliation"><sup>4</sup> Simon Fraser University</div> 
-        <div class="affiliation"><sup>5</sup> University of Toronto</div>  
         <br><br>
+        
         <br>
         <div class="links"><a href="resources/paper.pdf">[Paper]</a></div>
-        <div class="links"><a href="https://pointnerfpp.github.io/">[Video]</a></div>
-        <div class="links"><a href="https://github.com/pointnerfpp/code">[Code]</a></div>
-        <div class="links"><a href="https://arxiv.org/abs/2312.02362">[ArXiv]</a></div>
+        <div class="links"><a href="https://github.com/colinzhenli/PCS4ESR">[Code]</a></div>
+        <div class="links"><a href="todo">[ArXiv]</a></div>
         <br><br>
 
         <hr>
         <br>
         <p style="width: 80%;">
             <b>TL;DR:</b>
-            A multi-scale, point-based neural radiance field that allows for leveraging point cloud regardless of it's low quality (e.g., LIDAR with large incomplete space).  
+            A multi-scale, point-based surface reconstruction method that leverages point cloud serialization for fast neighbor approximation.
         </p>
         <br> 
         <div class="parent-video-compare-container">
-            <div class="b-dics", style="width: 100%; font-weight: 600;">
-                <div class="video-compare-container" id="materialsDiv">
-                    <video class="video" id="materials" loop playsinline autoPlay muted
-                      src="resources/Carla/Carla-1_Ours.mp4" onplay="resizeAndPlay(this)"></video>
-                    <canvas height=0 class="videoMerge" id="materialsMerge"></canvas>
-                </div>
+            <div class="video-compare-container" id="materialsDiv">
+                <video class="video" id="materials" loop playsinline autoPlay muted
+                  src="./resources/Carla/Carla-1_Reconsturction.mp4" onplay="resizeAndPlay(this)"></video>
+                <canvas height=0 class="videoMerge" id="materialsMerge"></canvas>
             </div>
+        </div>
         <br> 
         <br> 
         <p style="width: 80%;">
-            Note: CARLA(Driving Scene) subset reconstruction. 
+            Note: Reconstruction results of Carla subset. 
         </p>
         <br> 
         <hr>
@@ -112,224 +109,102 @@
                 </a>
             </div>
             <div class="paper-info">
-                <h3>PointNeRF++: A multi-scale, point-based Neural Radiance Field.</h3>
-                <p>Weiwei Sun, Eduard Trulls, Yang-Che Tseng, Sneha Sambandam, Gopal Sharma, Andrea Tagliasacchi, Kwang Moo Yi</p>
+                <h3>Point Cloud Serialization for Efficient Surface Reconstruction.</h3>
+                <p></p>
                 <p>arXiv.</p>
-                <pre><code>@InProceedings{sun2023pointnerfpp,
-                title = {PointNeRF++: A multi-scale, point-based Neural Radiance Field},
-                author = {Weiwei Sun, Eduard Trulls, Yang-Che Tseng, Sneha Sambandam, Gopal Sharma, Andrea Tagliasacchi, Kwang Moo Yi},
-                booktitle = {European Conference on Computer Vision},
-                year = {2024}}
+                <pre><code>@InProceedings{li2024pcs4esr,
+                title = {PCS4ESR: Point Cloud Serialization for Efficient Surface Reconstruction},
+                author = {Zhen Li, Weiwei Sun, Shrisudhan Govindarajan, Shaobo Xia, Daniel Rebain, Andrea Tagliasacchi},
+                booktitle = {3D Vision},
+                year = {2025}}
                 </code></pre>
             </div>
         <br>
         <hr>
         <h1>Abstract</h1>
         <p style="width: 80%;text-align: justify;">
-            We present a novel approach to large-scale point cloud surface reconstruction by developing an efficient framework that converts an irregular point cloud into a signed distance field (SDF). Our backbone builds upon recent transformer-based architectures (i.e., PointTransformerV3) that serializes the point cloud into a locality-preserving sequence of tokens. We efficiently predict the SDF value at a point by aggregating nearby tokens, where fast approximate neighbors can be retrieved thanks to the serialization. We serialize the point cloud at different levels/scales and non-linearly aggregate a feature to predict the SDF value. We show that aggregating across multiple scales is critical to overcome the approximations introduced by the serialization (i.e., false negatives in the neighborhood). Our framework sets the new state-of-the-art in terms of accuracy and efficiency (better or similar performance with half the latency of the best prior method, coupled with a simpler implementation), particularly on outdoor datasets where sparse-grid methods have shown limited performance.  To foster the continuation of research in this topic, we will release our complete source code, as well as our pre-trained models.
+        We present a novel approach to large-scale point cloud
+        surface reconstruction by developing an efficient framework
+        that converts an irregular point cloud into a signed distance
+        field (SDF). Our backbone builds upon recent transformer-
+        based architectures (i.e. PointTransformerV3), that serial-
+        izes the point cloud into a locality-preserving sequence of
+        tokens. We efficiently predict the SDF value at a point by ag-
+        gregating nearby tokens, where fast approximate neighbors
+        can be retrieved thanks to the serialization. We serialize
+        the point cloud at different levels/scales, and non-linearly
+        aggregate a feature to predict the SDF value. We show
+        that aggregating across multiple scales is critical to over-
+        come the approximations introduced by the serialization
+        (i.e. false negatives in the neighborhood). Our frameworks
+        sets the new state-of-the-art in terms of accuracy and effi-
+        ciency (better or similar performance with half the latency
+        of the best prior method, coupled with a simpler implemen-
+        tation), particularly on outdoor datasets where sparse-grid
+        methods have shown limited performance. To foster the
+        continuation of research in this topic, we have released our
+        complete source code, as well as our pre-trained models.
         </p>
         <br>    
         <hr>
         <h1>Method</h1>
-        <img style="width: 80%;" src="resources/overview.png" alt="Method Overview" />
+        <img style="width: 80%;" src="resources/figures/overview.png" alt="Method Overview" />
         <br><br>
         <p style="width: 80%;text-align: justify;">
-        <b>Overview</b>: given an input point cloud, we aggregate it over multi-scale voxel grids. For clarity, we draw the voxel grids in 2D.
-        We then perform volume rendering based on points, relying on feature vectors stored thereon, which we aggregate across multiple scales.
-        Importantly, when aggregating across scales, we only take into account 'valid' scales---denoted with the <font color="blue"> solid lines </font>  
-        and illustrated as the two overlaid scales in the middle ---naturally dealing with incomplete/sparse point clouds.
-        The coarsest scale is a single, global voxel, equivalent to standard NeRF (i.e., not point-based).
+        <b>Overview</b>: We map a sparse input point cloud with a point cloud backbone into a point feature hierarchy, from which
+        we compute the signed distance of a query. At each level, we utilize the efficient procedure to retrieve local
+        neighborhoods of the query. We then compute per-level features with the aggregation module. At last, we sum
+        per-level features and convert it into the signed distance with an MLP.
+        </p>
+        <br>
+        <img style="width: 80%;" src="resources/figures/neighborhood.png" alt="Neighborhood Function" />
+        <br><br>
+        <p style="width: 80%;text-align: justify;">
+        <b> Neighborhood function</b>: (left) retrieving a local neighborhood with K-nearest neighbor(KNN) or ball-query methods is
+        challenging to implement efficiently on GPU hardware. (right) we
+        propose to retrieve a neighborhood from a 1-D ordered list, by
+        serializing points along a Hibert curve, and excluding the impact of points distant from the query (i.e. remove false positives).
         </p>
         <br>
         <hr>
-        <h1>Nerf <font color="red">vs</font> PointNeRF <font color="red">vs</font> PointNerf++(ours)</h1>
+        <h1>NKSR <font color="red">vs</font> PCS4ESR(ours)</h1>
         <p style="width: 80%; text-align: justify;">
-            We compare PointNeRF++(ours) with baselines including NeRF and PointNeRF. We show that our method achieve significantly better results than both baselines. 
+            We compare PCS4ESR(ours) with baselines including Neural Kernel Surface Reconstruction (NKSR). Our method achieves high quality surface reconstructions
+            which preserve more details than NKSR, which loses information due to quantization for large and non-uniformly sampled datasets
+            like Carla. 
             Note that we can move <font color="blue"> slider left and right </font> to see the comparison.    
         </p>
         <br> 
         <div class="parent-video-compare-container">
             <div class="b-dics", style="width: 100%; font-weight: 600;">
-                <img src="resources/teaser_details/detailed_files/pcd/test_01_sample_8116_0.png" alt="Input point cloud">
-                <img src="resources/teaser_details/detailed_files/pointnerf/0000000000.png" alt="PointNeRF">
-                <img src="resources/teaser_details/detailed_files/our/0000000000.png" alt="PointNeRF++ (Ours)">
-                <img src="resources/teaser_details/detailed_files/nerf/0000000000.png" alt="NeRF">
+                <img src="resources/Carla/Cropped_Carla-31_Input.png" alt="Input point cloud">
+                <img src="resources/Carla/Cropped_Carla-31_NKSR.png" alt="NKSR">
+                <img src="resources/Carla/Cropped_Carla-31_Ours.png" alt="PCS4ESR (Ours)">`
             </div>
         </div>
         <br> 
         <br> 
         <hr>
-        <h1>More Rendering Results</h1>
-       
-        <table class="tbl_video">
-            <tr>
-                <td colspan="3" style="background-color: #85b2df; font-size: 20px;">
-                   Camera frames (Left camera) in KITTI-360.  
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <video class="kitti360" id="00" width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/kitti360_quali/00/stack_video_half_size.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <video class="kitti360" id="01" width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/kitti360_quali/01/stack_video_half_size.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <video class="kitti360" id="02" width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/kitti360_quali/02/stack_video_half_size.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <video class="kitti360" id="03" width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/kitti360_quali/03/stack_video_half_size.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <video class="kitti360" id="04" width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/kitti360_quali/04/stack_video_half_size.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td width=33.33% style="font-size: 18px;"> Point cloud at <br> image's viewpoint</td>
-                <td width=33.33% style="font-size: 18px;"> PointNeRF</td>
-                <td width=33.33% style="font-size: 18px;"> PointNeRF++ (Ours) </td>
-            </tr>
-        </table>
-        
-        <table class="tbl_video">
-            <tr>
-                <td colspan="3" style="background-color: #85b2df; font-size: 20px;">
-                   <span style="color: red;">Densely interpolated</span> frames in KITTI-360   
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <video class="kitti360dense" id="00" width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/kitti360_quali_dense/00/output_stacked_compressed_half_size_noptsnerf_compressed.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <video class="kitti360dense" id="01" width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/kitti360_quali_dense/01/output_stacked_compressed_half_size_noptsnerf_compressed.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <video class="kitti360dense" id="02" width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/kitti360_quali_dense/02/output_stacked_compressed_half_size_noptsnerf_compressed.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <video class="kitti360dense" id="03" width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/kitti360_quali_dense/03/output_stacked_compressed_half_size_noptsnerf_compressed.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <video class="kitti360dense" id="04" width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/kitti360_quali_dense/04/output_stacked_compressed_half_size_noptsnerf_compressed.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td width=33.33% style="font-size: 18px;"> Point cloud at <br> image's viewpoint</td>
-                <td width=33.33% style="font-size: 18px;"> Depth map</td>
-                <td width=33.33% style="font-size: 18px;"> Color </td>
-            </tr>
-        </table>
-        
-       
-        <table class="tbl_video">
-            <tr>
-                <td colspan="4" style="background-color: #85b2df; font-size: 20px;">
-                   More frames in ScanNet. 
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4">
-                    <video width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/scannet_quali/0101_04/compressed_stack_half_size.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <!-- <tr>
-                <td colspan="4">
-                    <video width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/scannet_quali/0241_01/compressed_stack_half_size.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr> -->
-            <tr>
-                <td width=25% style="font-size: 18px;"> Point cloud at <br> image's viewpoint</td>
-                <td width=25% style="font-size: 18px;"> PointNeRF</td>
-                <td width=25% style="font-size: 18px;"> PointNeRF++ (Ours) </td>
-                <td width=25% style="font-size: 18px;"> Ground Truth </td>
-            </tr>
-        </table> 
-        <table class="tbl_video">
-            <tr>
-                <td colspan="8" style="background-color: #85b2df; font-size: 20px;">
-                   Rendering across scales  
-                </td>
-            </tr>
-            <tr>
-                <td colspan="8">
-                    <video width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/scannet_scales/350_390/output_stacked_half_size.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="8">
-                    <video width="100%" preload="auto" playsinline webkit-playsinline loop autoplay muted>
-                        <source src="resources/scannet_scales/983_998/output_stacked_half_size.mp4" type="video/mp4">
-                    </video>
-                </td>
-            </tr>
-            <tr>
-                <td width=12.5% style="font-size: 18px; vertical-align: top; "> Point cloud at <br> image's viewpoint</td>
-                <td width=12.5% style="font-size: 18px; vertical-align: top; "> Level 0 <br> (Global level)</td>
-                <td width=12.5% style="font-size: 18px; vertical-align: top; "> Level 1 </td>
-                <td width=12.5% style="font-size: 18px; vertical-align: top; "> Level 2 </td>
-                <td width=12.5% style="font-size: 18px; vertical-align: top; "> Level 3 </td>
-                <td width=12.5% style="font-size: 18px; vertical-align: top; "> Level 4 <br> (Fine level) </td>
-                <td width=12.5% style="font-size: 18px; vertical-align: top; "> All levels </td>
-                <td width=12.5% style="font-size: 18px; vertical-align: top; "> Ground Truth </td>
-            </tr>
-        </table> 
+        <h1>More Reconstruction Results</h1>
+        <div class="container">
+            <div class="left_title">Outdoor Scene: Carla</div>
+            <img style="width: 80%;" src="resources/More_results/Carla.png"/>
+        </div>        
+        <br> 
+        <br> 
+        <div class="container">
+            <div class="left_title">Indoor Scene: ScanNet</div>
+            <img style="width: 80%;" src="resources/More_results/ScanNet.png"/>
+        </div>   
+        <br> 
+        <br> 
+        <div class="container">
+            <div class="left_title">Indoor Scene: SyntheticRoom</div>
+            <img style="width: 80%;" src="resources/More_results/Synthetic.png"/>
+        </div>   
 
         <hr>
         <h1>Acknowledgements</h1> 
-            <p style="width: 80%;text-align: justify;">
-            This work was supported in part by the Natural Sciences and Engineering Research Council of Canada (NSERC) Discovery Grant, NSERC Collaborative Research and Development Grant, Google, Digital Research Alliance of Canada, and Advanced Research Computing at the University of British Columbia.
-            <br><br>
-            This website is adapted from the template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>. 
-            This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful project</a>, and inherits the modifications made by <a href="https://github.com/elliottwu/webpage-template">Shangzhe Wu</a> 
-            and  <a href="https://github.com/canonical-capsules/canonical-capsules.github.io">Canonical Capsules</a>.
-
-            Video comparison is adapted from <a href="https://jonbarron.info/zipnerf">ZipNeRF</a>. 
-            Image slider script is adapted from  <a href="https://github.com/abelcabezaroman/definitive-image-comparison-slider">Dics</a>. 
-            The code can be found <a href="https://github.com/pointnerfpp/pointnerfpp.github.io">here</a>.
-            </p>
 
     <br><br>
     </div>
@@ -359,7 +234,6 @@
         initComparisons();
     </script>
     <br><br><br>
-
 
 </body>
 

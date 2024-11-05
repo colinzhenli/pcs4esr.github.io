@@ -62,11 +62,18 @@ body {
     font-size: 20px;
 }
 
-.affiliation {
-    font-size: 20px;
-    width: 95%;
-    max-width: 450px;
+.affiliation_group {
+    display: flex;           
+    justify-content: center; 
+    gap: 20px;               
+    flex-wrap: wrap;          
 }
+
+.affiliation_1, .affiliation_2 {
+    font-size: 20px;         
+    text-align: center;       
+}
+
 
 .points-label {
     margin-top: 2px;
@@ -78,6 +85,13 @@ body {
     border-radius: 50%;
     display: inline-block;
     border: 0px solid black;
+}
+
+.left_title {
+    font-size: 20px;           /* Set title font size */
+    text-align: left;     
+    margin-bottom: 10px;       /* Add some spacing below the title */
+    width: 80%;
 }
 
 .lines-label {
