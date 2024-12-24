@@ -5,15 +5,15 @@
 
 <head>
     <title>
-        PCS4ESR: Point Cloud Serialization for Efficient Surface Reconstruction. 
+        NoKSR: No Kernel Surface Reconstruction. 
     </title>
     <meta property="og:title"
-        content="PCS4ESR: Point Cloud Serialization for Efficient Surface Reconstruction." />
+        content="NoKSR: Neural Surface Kernel Reconstruction... but without the kernels." />
     <meta property="og:image" content="./resources/paper.png"/>
   	<meta property="og:description" content="
       A multi-scale, point-based surface reconstruction method that leverages point cloud serialization for fast neighbor approximation." />
     <meta property="twitter:card"          content="summary" />
-    <meta property="twitter:title"         content="PCS4ESR: Point Cloud Serialization for Efficient Surface Reconstruction" />
+    <meta property="twitter:title"         content="NoKSR: Neural Surface Kernel Reconstruction... but without the kernels." />
     <meta property="twitter:description"   content="A multi-scale, point-based surface reconstruction method that leverages point cloud serialization for fast neighbor approximation." />
     <meta property="twitter:image"         content="./resources/paper.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,15 +36,15 @@
 <body>
     <div class="container">
         <div class="title">
-            PCS4ESR: Point Cloud Serialization for Efficient Surface Reconstruction. 
+            NoKSR: Neural Surface Kernel Reconstruction... but without the kernels.
         </div>
 
         <br><br>
         <div class="author">
-            <a href="http://wsunid.github.io" target="_blank">Zhen Li</a> <sup>1</sup> 
+            <a href="http://colinzhenli.github.io" target="_blank">Zhen Li</a> <sup>1</sup><sup>*</sup> 
         </div>
         <div class="author">
-            <a href="https://wsunid.github.io/" target="_blank">Weiwei Sun</a> <sup>2</sup>
+            <a href="https://wsunid.github.io/" target="_blank">Weiwei Sun</a> <sup>2</sup><sup>*</sup>
         </div>
         <div class="author">
             <a href="https://shrisudhan.github.io/" target="_blank">Shrisudhan Govindarajan</a> <sup>1</sup>  
@@ -77,7 +77,7 @@
         
         <br>
         <div class="links"><a href="resources/paper.pdf">[Paper]</a></div>
-        <div class="links"><a href="https://github.com/colinzhenli/PCS4ESR">[Code]</a></div>
+        <div class="links"><a href="https://github.com/colinzhenli/NoKSR">[Code]</a></div>
         <div class="links"><a href="todo">[ArXiv]</a></div>
         <br><br>
 
@@ -91,7 +91,7 @@
         <div class="parent-video-compare-container">
             <div class="video-compare-container" id="materialsDiv">
                 <video class="video" id="materials" loop playsinline autoPlay muted
-                  src="./resources/Carla/Carla-1_Reconsturction.mp4" onplay="resizeAndPlay(this)"></video>
+                  src="./resources/Carla/Carla-14_Reconstruction.mp4" onplay="resizeAndPlay(this)"></video>
                 <canvas height=0 class="videoMerge" id="materialsMerge"></canvas>
             </div>
         </div>
@@ -109,11 +109,11 @@
                 </a>
             </div>
             <div class="paper-info">
-                <h3>Point Cloud Serialization for Efficient Surface Reconstruction.</h3>
+                <h3>Neural Surface Kernel Reconstruction... but without the kernels.</h3>
                 <p></p>
                 <p>arXiv.</p>
-                <pre><code>@InProceedings{li2024pcs4esr,
-                title = {PCS4ESR: Point Cloud Serialization for Efficient Surface Reconstruction},
+                <pre><code>@InProceedings{li2024NoKSR,
+                title = {NoKSR: Neural Surface Kernel Reconstruction... but without the kernels},
                 author = {Zhen Li, Weiwei Sun, Shrisudhan Govindarajan, Shaobo Xia, Daniel Rebain, Andrea Tagliasacchi},
                 booktitle = {3D Vision},
                 year = {2025}}
@@ -129,7 +129,7 @@
         field (SDF). Our backbone builds upon recent transformer-
         based architectures (i.e. PointTransformerV3), that serial-
         izes the point cloud into a locality-preserving sequence of
-        tokens. We efficiently predict the SDF value at a point by ag-
+        tokens. We efficiently predict t he SDF value at a point by ag-
         gregating nearby tokens, where fast approximate neighbors
         can be retrieved thanks to the serialization. We serialize
         the point cloud at different levels/scales, and non-linearly
@@ -167,9 +167,9 @@
         </p>
         <br>
         <hr>
-        <h1>NKSR <font color="red">vs</font> PCS4ESR(ours)</h1>
+        <h1>NKSR <font color="red">vs</font> NoKSR(ours)</h1>
         <p style="width: 80%; text-align: justify;">
-            We compare PCS4ESR(ours) with baselines including Neural Kernel Surface Reconstruction (NKSR). Our method achieves high quality surface reconstructions
+            We compare NoKSR(ours) with baselines including Neural Kernel Surface Reconstruction (NKSR). Our method achieves high quality surface reconstructions
             which preserve more details than NKSR, which loses information due to quantization for large and non-uniformly sampled datasets
             like Carla. 
             Note that we can move <font color="blue"> slider left and right </font> to see the comparison.    
@@ -177,9 +177,9 @@
         <br> 
         <div class="parent-video-compare-container">
             <div class="b-dics", style="width: 100%; font-weight: 600;">
-                <img src="resources/Carla/Cropped_Carla-31_Input.png" alt="Input point cloud">
-                <img src="resources/Carla/Cropped_Carla-31_NKSR.png" alt="NKSR">
-                <img src="resources/Carla/Cropped_Carla-31_Ours.png" alt="PCS4ESR (Ours)">`
+                <img src="resources/Carla/Cropped_Carla_Original_Ours_36.png" alt="Input point cloud">
+                <img src="resources/Carla/Cropped_Carla_Original_NKSR_36.png" alt="NKSR">
+                <img src="resources/Carla/Cropped_Carla_Original_Input_36.png" alt="NoKSR (Ours)">`
             </div>
         </div>
         <br> 
@@ -205,6 +205,8 @@
 
         <hr>
         <h1>Acknowledgements</h1> 
+        This work was supported in part by the Natural Sciences and Engineering Research Council of Canada (NSERC) Discovery Grant, NSERC Collaborative Research and Development Grant, Google DeepMind, Digital Research Alliance of Canada, the Advanced Research Computing at the University of British Columbia, and the SFU Visual Computing Research Chair program.
+        Shaobo Xia was supported by National Natural Science Foundation of China under Grant 42201481.
 
     <br><br>
     </div>
@@ -225,11 +227,11 @@
                 textPosition: "bottom",
                 // linesColor: 'rgb(0,0,0)'
             });
-            new Dics({
-                container: document.querySelectorAll('.b-dics')[1],
-                hideTexts: false,
-                textPosition: "bottom"
-            });
+            // new Dics({
+            //     container: document.querySelectorAll('.b-dics')[1],
+            //     hideTexts: false,
+            //     textPosition: "bottom"
+            // });
         });
         initComparisons();
     </script>
